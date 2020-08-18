@@ -18,6 +18,7 @@ player = new YT.Player('player', {
     'onStateChange': onPlayerStateChange
     }
 });
+
 }
 
 // 4. The API will call this function when the video player is ready.
@@ -73,4 +74,31 @@ function getVideoId(url) {
     id = url.substring(url.indexOf('=')+1, url.length);
     return id;
 }
+
+function videoEnded(playerStatus){
+    if (playerStatus == 0){
+        on();
+        console.log("IT IS OVER ANAKIN");
+    }else{
+        off();
+    }
+}
+
+function onPlayerStateChange(event) {
+    videoEnded(event.data);
+  }
+
+  function on() {
+    document.getElementById("player").style.display = "none";
+    document.getElementById("overlay").style.display = "block";
+  }
+  
+  function off() {
+    document.getElementById("player").style.display = "block";
+    document.getElementById("overlay").style.display = "none";
+  }
+
+
+    //return over;
+
 
