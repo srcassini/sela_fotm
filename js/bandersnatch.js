@@ -6,8 +6,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 function onYouTubeIframeAPIReady() {
 player = new YT.Player('player', {
-    height: '390',
-    width: '640',
+    height: '100%',
+    width: '100%',
     videoId: 'Ch5MEJk5ZCQ', //intro video id
     events: {
     'onReady': onPlayerReady,
@@ -96,8 +96,8 @@ function onPlayerStateChange(event) {
   }
   
   function off() {
-    document.getElementById("player").style.display = "block";
     document.getElementById("overlay").style.display = "none";
+    document.getElementById("player").style.display = "block";
   }
 
 

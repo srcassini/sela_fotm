@@ -2,16 +2,20 @@
 <html>
 <head>
 <style>
+
+html,body{
+    height:100%;
+}
+
 #overlay{
-    width: 640px;
-    height: 340px;
+    display: none;
+    width: 100%;
+    height: 100%;
 }
 #op1, #op2{
   position: absolute;
-  top: 31%;
-  left: 9%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  left: 12%;
+  top: 32%;
   background-color: transparent;
   color: white;
   font-size: 16px;
@@ -20,12 +24,11 @@
   border-radius: 5px;
   text-align: center;
   z-index: 5;
-  width: 15%;
-  height: 36%;
+  width: 37%;
+  height: 37%;
 }
 #op2{
-    top: 31%;
-    left: 25%;
+    left: 51%;
 }
 </style>
 <title>Page Title</title>
@@ -33,22 +36,21 @@
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<!-- <h1>This is a Heading</h1>
+<p>This is a paragraph.</p> -->
 
 <div id="player" style = "visibility: visible;">
 
 </div>
 <div id = "overlay">
-    <button id="op1" onclick="option1()">Option 1</button>
-    <button id="op2" onclick="option2()">Option 2</button>
-    <img src = "Rough options screenshots.png" style = "width: 640px; height: 390;">
+    <button id="op1" onclick="option1()"></button>
+    <button id="op2" onclick="option2()"></button>
+    <img id ="image" src = "Rough options screenshots.png" style = "width: 100%; height: 100%;">
 
 </div>
 <br>
 
-<button id="list_state" onclick="getListState()">getListState</button>
-<button id="end" onclick="confirmChoices()">Confirm Choices</button>
+<!-- <button id="end" onclick="confirmChoices()">Confirm Choices</button> -->
 
 
 <script>
